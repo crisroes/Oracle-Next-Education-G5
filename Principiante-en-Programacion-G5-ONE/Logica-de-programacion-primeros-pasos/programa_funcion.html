@@ -5,11 +5,17 @@
   function saltarLinea() {
     document.write("<br><br>");
   }
+  function imprimir(frase) {
+    document.write(frase);
+    saltarLinea();
+  }
+
+  //este codigo calcula las edades de Juan, Pedro y Carlos
   var anio = 2025;
-  document.write("Juan tiene: " + (anio - 2000) + " años");
-  saltarLinea();
-  document.write("Pedro tiene: " + (anio - 1995) + " años");
-  saltarLinea();
+  imprimir("Juan tiene: " + (anio - 2000) + " años");
+
+  imprimir("Pedro tiene: " + (anio - 1995) + " años");
+
   anio = 2030;
-  document.write("Carlos tiene: " + (anio - 2005) + " años");
+  imprimir("Carlos tiene: " + (anio - 2005) + " años");
 </script>

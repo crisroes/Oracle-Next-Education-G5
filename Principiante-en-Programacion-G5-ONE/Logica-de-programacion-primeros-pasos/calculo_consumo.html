@@ -1,0 +1,32 @@
+<meta charset="UTF-8" />
+<h1>Cálculo de consumo</h1>
+<h3>¿Alcohol o gasolina?</h3>
+<script>
+  document.write("<h3>Gasolina</h3>");
+  var tanqueGasolina = 40; //litros
+  var recorridoGasolina = 480; //kilómetros
+  document.write("<br>");
+  document.write(tanqueGasolina + " litros de Gasolina");
+  document.write("<br>");
+  document.write(recorridoGasolina + " kilómetros de recorrido");
+  document.write("<br>");
+  var eficiencia = recorridoGasolina / tanqueGasolina;
+
+  document.write(
+    "La eficiencia del carro usando la gasolina es: " + eficiencia
+  );
+
+  document.write("<br>");
+  document.write("<h3>Alcohol</h3>");
+  document.write("<br>");
+  var tanqueAlcohol = 40; //litros
+  var recorridoAlcohol = 300; //kilómetros
+
+  document.write(tanqueAlcohol + " litros de Alcohol");
+  document.write("<br>");
+  document.write(recorridoAlcohol + " kilómetros de recorrido");
+  document.write("<br>");
+  var eficiencia = recorridoAlcohol / tanqueGasolina;
+
+  document.write("La eficiencia del carro usando el alcohol es: " + eficiencia);
+</script>

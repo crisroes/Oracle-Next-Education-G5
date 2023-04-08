@@ -1,0 +1,20 @@
+<meta charset="UTF-8" />
+
+<script>
+  function saltarLinea() {
+    document.write("<br>");
+  }
+
+  function imprimir(frase) {
+    document.write(frase);
+    saltarLinea();
+  }
+  numero = 1;
+  while (numero <= 100) {
+    if (numero % 2 == 0) {
+      imprimir(numero);
+    }
+    numero++;
+  }
+  imprimir("FIN");
+</script>

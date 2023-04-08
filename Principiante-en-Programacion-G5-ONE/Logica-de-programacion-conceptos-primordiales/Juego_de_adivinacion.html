@@ -14,18 +14,39 @@
   function sorteo(numero) {
     return Math.round(Math.random() * numero);
   }
-  var numeroLimite = parseInt(prompt("Ingrese un numero limite"));
+  var numeroLimite = parseInt(prompt("Ingrese un número limite"));
   var numeroPensado = sorteo(numeroLimite);
-  var numeroLanzado = parseInt(
-    prompt("Ingrese un número entre 0 y " + numeroLimite)
-  );
-  if (numeroPensado == numeroLanzado) {
-    imprimir("usted acertó");
-  } else {
-    if (numeroPensado > numeroLanzado) {
-      imprimir("El numero lanzado es menor que el numero pensado");
+  var intentos = 3;
+  contador = 1;
+  while (contador <= intentos) {
+    var numeroLanzado = parseInt(
+      prompt("Ingrese un número entre 0 y " + numeroLimite)
+    );
+    if (numeroPensado == numeroLanzado) {
+      alert(
+        "usted acertó, en el intento " +
+          contador +
+          " el número pensado era " +
+          numeroPensado
+      );
+      break;
     } else {
-      imprimir("El numero lanzado es mayor que el numero pensado");
+      if (numeroPensado > numeroLanzado) {
+        alert("El número lanzado es menor que el numero pensado");
+      } else {
+        alert("El número lanzado es mayor que el numero pensado");
+      }
     }
+    contador++;
+  }
+  if (numeroPensado == numeroLanzado) {
+    imprimir(
+      "usted acertó, en el intento " +
+        contador +
+        " el número pensado era " +
+        numeroPensado
+    );
+  } else {
+    imprimir("usted erró, el número pensado era " + numeroPensado);
   }
 </script>
